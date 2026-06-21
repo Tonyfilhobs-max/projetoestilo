@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roleta Premiada Style Essence</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="badge">STYLE ESSENCE</div>
+      <h1>Gire e Ganhe</h1>
+      <p>Participe da roleta premiada e concorra a descontos e brindes especiais.</p>
+    </section>
+
+    <section class="card" id="formCard">
+      <h2>Preencha para participar</h2>
+      <input id="name" type="text" placeholder="Seu nome" autocomplete="name" />
+      <input id="phone" type="tel" placeholder="Seu WhatsApp" autocomplete="tel" />
+      <label class="check">
+        <input id="terms" type="checkbox" />
+        Aceito participar da promoção e receber contato da Style Essence.
+      </label>
+      <button id="startBtn">Liberar minha roleta</button>
+      <small>Permitido apenas 1 giro por WhatsApp neste aparelho.</small>
+    </section>
+
+    <section class="wheel-area hidden" id="wheelArea">
+      <div class="pointer"></div>
+      <canvas id="wheel" width="360" height="360"></canvas>
+      <button id="spinBtn" class="spin">GIRAR</button>
+    </section>
+
+    <section class="result hidden" id="resultBox">
+      <h2>Parabéns!</h2>
+      <p id="prizeText"></p>
+      <div class="coupon" id="couponCode"></div>
+      <p class="rules">Apresente este cupom na Style Essence para validar seu prêmio.</p>
+      <a id="whatsappBtn" class="whatsapp" target="_blank" rel="noopener">Enviar para WhatsApp</a>
+    </section>
+
+    <section class="admin card">
+      <details>
+        <summary>Painel de participantes</summary>
+        <input id="adminPass" type="password" placeholder="Senha do painel" />
+        <button id="adminBtn">Entrar</button>
+        <div id="adminPanel" class="hidden">
+          <button id="exportCsv">Exportar CSV</button>
+          <button id="clearData">Limpar dados</button>
+          <div id="participants"></div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
